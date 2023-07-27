@@ -123,36 +123,14 @@
             <h2 class="section__title">{{site.about_me_title}}</h2>
 
             <div class="about__container container grid">
-               
-                <div class="about__data">
-                    <div class="about__info">
-                        {% for language in site.data.skills-languages %}
-                        <div class="about__box">
-                            <i class='bx bx-award about__icon'></i>
-                            <h3 class="about__title">{{language.name}}</h3>
-                            <span class="about__subtitle"> {{language.weight}}</span>
-                        </div>
-                        {% endfor %}
-                        {% for framework in site.data.skills-frameworks %}
-                        <div class="about__box">
-                            <i class='bx bx-award about__icon'></i>
-                            <h3 class="about__title">{{framework.name}}</h3>
-                            <span class="about__subtitle"> {{framework.weight}}</span>
-                        </div>
-                        {% endfor %}
-                        {% for tool in site.data.skills-tools %}
-                        <div class="about__box">
-                            <i class='bx bx-award about__icon'></i>
-                            <h3 class="about__title">{{tool.name}}</h3>
-                            <span class="about__subtitle"> {{tool.weight}}</span>
-                        </div>
-                        {% endfor %}
-                        
-                    </div>
+                <img src="{{site.baseurl}}/assets/img/TU_Dresden_Logo_weiss.png" alt="" class="about__img">
+                <img src="{{site.baseurl}}/assets/img/EFRE-ESF_dark.jpg" alt="" class="about__img">
+
+           
 
                     <p class="about__description">{{site.about_me_description}}</p>
 
-                    <a href="#contact" class="button about__button-contact">Contact Me</a>
+                    <a href="#contact" class="button about__button-contact" style="text-align:center"> Contact Me</a>
                 </div>
             </div>
         </section>

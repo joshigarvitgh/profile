@@ -419,6 +419,7 @@ body.light-theme {
   border-radius: 0.8rem;
   font-weight: var(--font-medium);
   transition: 0.4s;
+  justify-content: center;
 }
 
 .button:hover {
