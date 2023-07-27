@@ -1,0 +1,36 @@
+# > name: Name of your project
+# > descr: Description of your project
+# > demo: Link to your project
+# > tags: List of technologies you used in your projects
+#
+# Example of a project
+# - name: project X
+#   descr: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam"
+#   demo: https://example.com/
+#   tags:
+#     - tag: MongoDB
+#     - tag: Express
+#     - tag: AngularJS
+#     - tag: Node
+- name: Interpretable neural networks for the analysis of brain functions
+  descr: „Diese Maßnahme wird mit Mitteln der Europäischen Union kofinanziert und durch Steuermittel auf Grundlage des vom Sächsischen Landtags beschlossenen Haushaltes mitfinanziert.“
+  demo: https://tu-dresden.de/
+  image: "ok"
+  tags:
+    - tag: Deep Learning
+    - tag: Software Engineering
+
+- name: SFB940 "Volition and Cognitive Control
+  descr: "University Funded Project "
+  demo: https://tu-dresden.de/bereichsuebergreifendes/sfb940/?set_language=de
+  tags:
+    - tag: Deep Learning
+    - tag: Software Engineering
+
+- name: Project Z2 Core Imaging Facility
+  descr:  "University Funded Project"
+  demo: https://tu-dresden.de/bereichsuebergreifendes/sfb940/research/z-zentralprojekte/z2/research/b-modulatoren/b3
+  tags:
+    - tag: Neuro Imaging
+
+

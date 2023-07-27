@@ -1,0 +1,60 @@
+# > title: Name of your timeline entry, university or work place
+# > title-url: Link to your timeline entry, university or work place
+# > date: Time span
+# > subtitle: The description under the title
+# > tags: List of tags you want to associate with the entry
+# > timeline-side: The side on which you want to display the entry: left or right
+
+# Example of a timeline entry
+# - title: airbnb
+#   title-url: https://example.com/
+#   date: Sep 2019 - Present
+#   subtitle: Fullstack Developer
+#   tags:
+#     - tag: React
+#     - tag: Javascript
+#     - tag: Ruby
+#     - tag: Rails
+#   timeline-side: right
+- title: Technische Universität Dresden
+  title-url: https://tu-dresden.de/
+  date: 09/2022 - Ongoing 
+  subtitle: Docktorand Student
+  timeline-side: left
+
+- title: Technische Universität Dresden
+  title-url: https://tu-dresden.de/
+  date: 11/22 - 08/23
+  subtitle: Wissenschaftliche Mitarbeiter
+  tags:
+    - tag: Deep Learning-basierte Analyse
+    - tag: Methoden der Datenkompression
+    - tag: Optimierung neuronaler Netze
+  timeline-side: right
+
+- title: IVI-Fraunhofer Dreden
+  title-url: https://www.ivi.fraunhofer.de/
+  date: 06/2022 - 10/2022
+  subtitle: Wissenschaftliche Hilfskraft 
+  tags:
+   - tag: Geoinformatik
+   - tag: ML OPS
+   - tag: System-Integration
+   - tag: Explorative Studien
+  timeline-side: right
+
+- title: Technische Universität Dresden
+  title-url: https://tu-dresden.de/
+  date: 2018 - 2022
+  subtitle: MSc. Computational Logic
+  tags:
+    - tag: Logic and Ontology
+    - tag: Deep Learning
+    - tag: ASP
+  timeline-side: left
+
+- title: Rajiv Gandhi Proudyogiki Vishwavidyalaya
+  title-url: https://www.rgpv.ac.in/
+  date: 2014 - 2018
+  subtitle: B.E. Computer Science and Engeneering
+  timeline-side: left
