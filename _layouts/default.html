@@ -155,7 +155,7 @@
                         {{event.date}}
                       </span>
                     </div>
-                            <p>Working alongside the designer team implementing the designs, also developing custom s olutions to address team necessities.</p>
+                          
                             <a href="{{event.title-url}}" target="_blank" rel="noreferrer">Link</a>
                     <ul class="content-skills">
                     {% for tag in event.tags %}
@@ -170,7 +170,174 @@
                 </section> <!-- cd-timeline -->
        
         </section>
+         <!--=============== Skills ===============-->
+         <section class="skill section">
+            <span class="section__subtitle">What Can i Do ?</span>
+            <h2 class="section__title">My Skills</h2>
+            <div class="skills__container container grid">
 
+                <!--Programming Languge-->
+                <div class="skills__content">
+                    <h3 class="skills__title">Programming Languages</h3>
+                    <canvas id="chartId1" aria-label="chart" height="500" width="680" style="background-color:rgba(219,215,245,1)" ></canvas>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.1/chart.min.js"></script>
+                    <script>
+                       var chrt = document.getElementById("chartId1").getContext("2d");
+                       var chartId = new Chart(chrt, {
+                          type: 'radar',
+                          data: {
+                             labels: ["Python & C/C++", "Prolog & Pascal", "Matlab", "Ruby & Rust", "SparQL & OWL", "HTML/CSS/JS"],
+                             datasets: [{
+                                label: "Programming Languages Strength",
+                                data: [100, 70, 80, 55, 60, 75],
+                                backgroundColor: ['lightgrey'],
+                                pointBackgroundColor: ['yellow', 'aqua', 'pink', 'lightgreen', 'lightblue', 'gold'],
+                                borderColor: ['black'],
+                                borderWidth: 3,
+                                pointRadius: 6,
+                             }],
+                          },
+                          options: {
+                             responsive: false,
+                             elements: {
+                                line: {
+                                   borderWidth: 3
+                                }
+                             },
+                             plugins: {
+                                    legend: {
+                                    display: false
+                                    }
+                                },
+                                scales: {
+                                        yAxes: [{
+                                            ticks: {
+                                                fontSize: 40
+                                            }
+                                        }]
+                                    }
+                            
+                          },
+                       });
+                    </script>
+                
+                </div>
+
+                <!--Human Languge-->
+
+                <div class="skills__content">
+                    <h3 class="skills__title">Human Language</h3>
+                    <canvas id="chartId2" aria-label="chart"></canvas>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.1/chart.min.js"></script>
+                    <script>
+                       var chrt = document.getElementById("chartId2").getContext("2d");
+                       var chartId = new Chart(chrt, {
+                          type: 'radar',
+                          data: {
+                             labels: ["skfb", "ertet", "JAVASertCRIPT", "CHereART.JS", "JQUEertRY", "BOOTertSTRP"],
+                             datasets: [{
+                                data: [20, 40, 33, 35, 30, 38],
+                                backgroundColor: ['lightgrey'],
+                                pointBackgroundColor: ['yellow', 'aqua', 'pink', 'lightgreen', 'lightblue', 'gold'],
+                                borderColor: ['black'],
+                                borderWidth: 1,
+                                pointRadius: 6,
+                             }],
+                          },
+                          options: {
+                             responsive: true,
+                             elements: {
+                                line: {
+                                   borderWidth: 3
+                                }
+                             }
+                          },
+                       });
+                    </script>
+                
+                </div>
+
+                 <!--FrameWorks -->
+                
+                 <div class="skills__content">
+                    <h3 class="skills__title">FrameWorks</h3>
+                    <canvas id="chartId3" aria-label="chart" height="350" width="580"></canvas>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.1/chart.min.js"></script>
+                    <script>
+                       var chrt = document.getElementById("chartId3").getContext("2d");
+                       var chartId = new Chart(chrt, {
+                          type: 'radar',
+                          data: {
+                             labels: ["HTML", "CSS", "JAVASCRIPT", "CHART.JS", "JQUERY", "BOOTSTRP"],
+                             datasets: [{
+                                data: [20, 40, 33, 35, 30, 38],
+                                backgroundColor: ['lightgrey'],
+                                pointBackgroundColor: ['yellow', 'aqua', 'pink', 'lightgreen', 'lightblue', 'gold'],
+                                borderColor: ['black'],
+                                borderWidth: 1,
+                                pointRadius: 6,
+                             }],
+                          },
+                          options: {
+                             responsive: true,
+                             elements: {
+                                line: {
+                                   borderWidth: 3
+                                }
+                             }
+                          },
+                       });
+                    </script>
+                
+                </div>
+
+                 <!--FrameWorks -->
+                
+                 <div class="skills__content">
+                    <h3 class="skills__title">Tools</h3>
+                    <canvas id="chartId4" aria-label="chart" height="350" width="580"></canvas>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.1/chart.min.js"></script>
+                    <script>
+                       var chrt = document.getElementById("chartId4").getContext("2d");
+                       var chartId = new Chart(chrt, {
+                          type: 'radar',
+                          data: {
+                             labels: ["HTML", "CSS", "JAVASCRIPT", "CHART.JS", "JQUERY", "BOOTSTRP"],
+                             datasets: [{
+                                data: [20, 40, 33, 35, 30, 38],
+                                backgroundColor: ['lightgrey'],
+                                pointBackgroundColor: ['yellow', 'aqua', 'pink', 'lightgreen', 'lightblue', 'gold'],
+                                borderColor: ['black'],
+                                borderWidth: 1,
+                                pointRadius: 6,
+                             }],
+                          },
+                          options: {
+                             responsive: true,
+                             elements: {
+                                line: {
+                                   borderWidth: 3
+                                }
+                             }
+                          },
+                       });
+                    </script>
+                
+                </div>
+
+            </div>
+
+
+
+
+
+
+            
+          
+
+           
+
+        </section>
         <!--=============== SERVICES ===============-->
         <section class="services section">
             <span class="section__subtitle">My Projects</span>
