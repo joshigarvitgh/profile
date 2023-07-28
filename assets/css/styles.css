@@ -441,7 +441,6 @@ body.light-theme {
 
 .about__img {
   width: 220px;
-  border-radius: 1.5rem;
   justify-self: center;
 }
 
@@ -1209,7 +1208,7 @@ body.light-theme {
   }
 
   .contact__container {
-    grid-template-columns: repeat(2, 430px);
+    grid-template-columns: repeat(1, 430px);
     column-gap: 6rem;
   }
 
