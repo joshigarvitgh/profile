@@ -171,172 +171,13 @@
        
         </section>
          <!--=============== Skills ===============-->
-         <section class="skill section">
+         <section class="skill section" id="skills2">
             <span class="section__subtitle">What Can i Do ?</span>
             <h2 class="section__title">My Skills</h2>
             <div class="skills__container container grid">
-
-                <!--Programming Languge-->
-                <div class="skills__content">
-                    <h3 class="skills__title">Programming Languages</h3>
-                    <canvas id="chartId1" aria-label="chart" height="500" width="680" style="background-color:rgba(219,215,245,1)" ></canvas>
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.1/chart.min.js"></script>
-                    <script>
-                       var chrt = document.getElementById("chartId1").getContext("2d");
-                       var chartId = new Chart(chrt, {
-                          type: 'radar',
-                          data: {
-                             labels: ["Python & C/C++", "Prolog & Pascal", "Matlab", "Ruby & Rust", "SparQL & OWL", "HTML/CSS/JS"],
-                             datasets: [{
-                                label: "Programming Languages Strength",
-                                data: [100, 70, 80, 55, 60, 75],
-                                backgroundColor: ['lightgrey'],
-                                pointBackgroundColor: ['yellow', 'aqua', 'pink', 'lightgreen', 'lightblue', 'gold'],
-                                borderColor: ['black'],
-                                borderWidth: 3,
-                                pointRadius: 6,
-                             }],
-                          },
-                          options: {
-                             responsive: false,
-                             elements: {
-                                line: {
-                                   borderWidth: 3
-                                }
-                             },
-                             plugins: {
-                                    legend: {
-                                    display: false
-                                    }
-                                },
-                                scales: {
-                                        yAxes: [{
-                                            ticks: {
-                                                fontSize: 40
-                                            }
-                                        }]
-                                    }
-                            
-                          },
-                       });
-                    </script>
-                
-                </div>
-
-                <!--Human Languge-->
-
-                <div class="skills__content">
-                    <h3 class="skills__title">Human Language</h3>
-                    <canvas id="chartId2" aria-label="chart"></canvas>
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.1/chart.min.js"></script>
-                    <script>
-                       var chrt = document.getElementById("chartId2").getContext("2d");
-                       var chartId = new Chart(chrt, {
-                          type: 'radar',
-                          data: {
-                             labels: ["skfb", "ertet", "JAVASertCRIPT", "CHereART.JS", "JQUEertRY", "BOOTertSTRP"],
-                             datasets: [{
-                                data: [20, 40, 33, 35, 30, 38],
-                                backgroundColor: ['lightgrey'],
-                                pointBackgroundColor: ['yellow', 'aqua', 'pink', 'lightgreen', 'lightblue', 'gold'],
-                                borderColor: ['black'],
-                                borderWidth: 1,
-                                pointRadius: 6,
-                             }],
-                          },
-                          options: {
-                             responsive: true,
-                             elements: {
-                                line: {
-                                   borderWidth: 3
-                                }
-                             }
-                          },
-                       });
-                    </script>
-                
-                </div>
-
-                 <!--FrameWorks -->
-                
-                 <div class="skills__content">
-                    <h3 class="skills__title">FrameWorks</h3>
-                    <canvas id="chartId3" aria-label="chart" height="350" width="580"></canvas>
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.1/chart.min.js"></script>
-                    <script>
-                       var chrt = document.getElementById("chartId3").getContext("2d");
-                       var chartId = new Chart(chrt, {
-                          type: 'radar',
-                          data: {
-                             labels: ["HTML", "CSS", "JAVASCRIPT", "CHART.JS", "JQUERY", "BOOTSTRP"],
-                             datasets: [{
-                                data: [20, 40, 33, 35, 30, 38],
-                                backgroundColor: ['lightgrey'],
-                                pointBackgroundColor: ['yellow', 'aqua', 'pink', 'lightgreen', 'lightblue', 'gold'],
-                                borderColor: ['black'],
-                                borderWidth: 1,
-                                pointRadius: 6,
-                             }],
-                          },
-                          options: {
-                             responsive: true,
-                             elements: {
-                                line: {
-                                   borderWidth: 3
-                                }
-                             }
-                          },
-                       });
-                    </script>
-                
-                </div>
-
-                 <!--FrameWorks -->
-                
-                 <div class="skills__content">
-                    <h3 class="skills__title">Tools</h3>
-                    <canvas id="chartId4" aria-label="chart" height="350" width="580"></canvas>
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.1/chart.min.js"></script>
-                    <script>
-                       var chrt = document.getElementById("chartId4").getContext("2d");
-                       var chartId = new Chart(chrt, {
-                          type: 'radar',
-                          data: {
-                             labels: ["HTML", "CSS", "JAVASCRIPT", "CHART.JS", "JQUERY", "BOOTSTRP"],
-                             datasets: [{
-                                data: [20, 40, 33, 35, 30, 38],
-                                backgroundColor: ['lightgrey'],
-                                pointBackgroundColor: ['yellow', 'aqua', 'pink', 'lightgreen', 'lightblue', 'gold'],
-                                borderColor: ['black'],
-                                borderWidth: 1,
-                                pointRadius: 6,
-                             }],
-                          },
-                          options: {
-                             responsive: true,
-                             elements: {
-                                line: {
-                                   borderWidth: 3
-                                }
-                             }
-                          },
-                       });
-                    </script>
-                
-                </div>
+                <div class="cs"></div>
 
             </div>
-
-
-
-
-
-
-            
-          
-
-           
-
         </section>
         <!--=============== SERVICES ===============-->
         <section class="services section">
@@ -522,6 +363,144 @@
 
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
+
+    <script>
+
+var skills = [
+  {"header" : "INTERESTS",
+    "captions" : [
+      "Cooking",
+      "Web",
+      "Mobile",
+      "Design",
+      "AI"
+    ],
+    "values" : [
+      0.70,
+      0.90,
+      0.70,
+      0.80,
+      0.70
+    ]
+  },
+  {"header" : "LANGUAGES",
+    "captions" : [
+      "nodeJS",
+      "PHP",
+      "JS",
+      "Ruby",
+      "Java"
+    ],
+    "values" : [
+      0.80,
+      0.85,
+      0.90,
+      0.70,
+      0.90
+    ]
+  },
+  {"header" : "MISC",
+    "captions" : [
+      "Eclipse",
+      "Git",
+      "Rails",
+      "OpenGL",
+      "Linux"
+    ],
+    "values" : [
+      0.85,
+      0.85,
+      0.75,
+      0.60,
+      0.80
+    ]
+  }
+];
+
+var pentagonIndex = 0;
+var valueIndex = 0;
+var width = 0;
+var height = 0;
+var radOffset = Math.PI/2
+var sides = 5; // Number of sides in the polygon
+var theta = 2 * Math.PI/sides; // radians per section
+
+function getXY(i, radius) {
+  return {"x": Math.cos(radOffset +theta * i) * radius*width + width/2,
+    "y": Math.sin(radOffset +theta * i) * radius*height + height/2};
+}
+
+var hue = [];
+var hueOffset = 25;
+
+for (var s in skills) {
+  $(".cs").append('<div class="pentagon" id="interests"><div class="hd"></div><canvas class="pentCanvas"/></div>');
+  hue[s] = (hueOffset + s * 255/skills.length) % 255;
+}
+
+$(".pentagon").each(function(index){
+  width = $(this).width();
+  height = $(this).height();
+  var ctx = $(this).find('canvas')[0].getContext('2d');
+  ctx.canvas.width = width;
+  ctx.canvas.height = height;
+  ctx.font="15px Monospace";
+  ctx.textAlign="center";
+  
+  /*** LABEL ***/
+  color = "hsl("+hue[pentagonIndex]+", 100%, 50%)";
+  ctx.fillStyle = color;
+  ctx.fillText(skills[pentagonIndex].header, width/2, 15);
+
+  ctx.font="13px Monospace";   
+
+  /*** PENTAGON BACKGROUND ***/
+  for (var i = 0; i < sides; i++) {
+    // For each side, draw two segments: the side, and the radius
+    ctx.beginPath();
+    xy = getXY(i, 0.3);
+    colorJitter = 25 + theta*i*2;
+    color = "hsl("+hue[pentagonIndex]+",100%," + colorJitter + "%)";
+    ctx.fillStyle = color;
+    ctx.strokeStyle = color;
+    ctx.moveTo(0.5*width, 0.5*height); //center
+    ctx.lineTo(xy.x, xy.y);
+    xy = getXY(i+1, 0.3);
+    ctx.lineTo(xy.x, xy.y);
+    xy = getXY(i, 0.37);
+    console.log();
+    ctx.fillText(skills[ pentagonIndex].captions[valueIndex],xy.x, xy.y +5);
+    valueIndex++;
+    ctx.closePath();
+    ctx.fill();
+    ctx.stroke();
+  }
+  
+  valueIndex = 0;
+  ctx.beginPath();
+  ctx.fillStyle = "rgba(0, 0, 0, 0.2)";
+  ctx.strokeStyle = "rgba(0, 0, 0, 0.3)";
+  ctx.lineWidth = 5;
+  var value = skills[pentagonIndex].values[valueIndex];
+  xy = getXY(i, value * 0.3);
+  ctx.moveTo(xy.x,xy.y);
+  /*** SKILL GRAPH ***/
+  for (var i = 0; i < sides; i++) {
+    xy = getXY(i, value * 0.3);
+    ctx.lineTo(xy.x,xy.y);
+    valueIndex++;
+    value = skills[pentagonIndex].values[valueIndex];
+  }
+  ctx.closePath();
+  ctx.stroke();
+  ctx.fill();
+  valueIndex = 0;  
+  pentagonIndex++;
+});
+
+
+
+    </script>
 </body>
 
 </html>

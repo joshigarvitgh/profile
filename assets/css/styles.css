@@ -1455,3 +1455,28 @@ Main components
     text-align: right;
   }
 }
+
+
+.cs {
+  margin: auto;
+  text-align: center;
+}
+
+#c {
+  margin: auto;
+}
+
+.hd {
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  height: 25px;
+}
+
+.pentagon {
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  padding: 3px 3px 28px 3px;
+  display:inline-block;
+}
