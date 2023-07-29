@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+<!DOCTYPE html> 
+<html lang="en">  
+           
+<head>    
+    <meta charset="UTF-8">       
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
     <!--=============== FAVICON ===============-->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
@@ -15,25 +15,25 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
     <meta name="theme-color" content="#a789d4">
-
+ 
     <!--=============== BOXICONS ===============-->
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 
-    <!--=============== SWIPER CSS ===============-->
+    <!--=============== SWIPER CSS ===============--> 
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-
+ 
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/styles.css">
     <title>Garvit Joshi's Portfolio</title>
     <meta name="description" content="Personal website powered by Jekyll">
 </head>
-
+ 
 <body>
     <!--=============== HEADER ===============-->
-    <header class="header" id="header">
-        <nav class="nav container">
+    <header class="header" id="header"> 
+        <nav class="nav container"> 
             <a href="https://tu-dresden.de/bereichsuebergreifendes/nic/research/grps_med/sesyn/people/garvit_joshi" class="nav__logo">Garvit Joshi</a>
-
+ 
             <div class="nav__menu">
                 <ul class="nav__list">
                     <li class="nav__item ">
@@ -289,14 +289,223 @@
             <span class="section__subtitle">What Can i Do ?</span>
             <h2 class="section__title">My Skills</h2>
             <div class="skills__container container grid">
-                <div class="cs"></div>
+                
+<style>
 
-            </div>
+.hd {
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  height: 25px;
+}
+
+.pg {
+  width: 400px;
+  height: 400px;
+  margin: auto;
+  padding: 3px 3px 28px 3px;
+  display:inline-block;
+}
+
+</style>
+
+  <div class="pg" id="interests"><div class="hd"></div><canvas class="pentCanvas" width="500" height="500"></canvas></div>
+
+  <div class="pg" id="interests"><div class="hd"></div><canvas class="pentCanvas" width="500" height="500"></canvas></div>
+
+  <div class="pg" id="interests"><div class="hd"></div><canvas class="pentCanvas" width="500" height="500"></canvas></div>
+
+  <div class="pg" id="interests"><div class="hd"></div><canvas class="pentCanvas" width="500" height="500"></canvas></div>
+
+
+
+<!--
+
+ <div class="content">
+  </div>
+
+-->
+ 
+
+  <!--
+  </div>
+  <div class="pg" id="interests">
+  <div class="hd"></div><canvas class="pentCanvas" width="300" height="300"></canvas>
+  </div><div class="pg" id="interests"><div class="hd">
+  </div><canvas class="pentCanvas" width="300" height="300"></canvas></div></div>
+
+  -->
+
+  
+  
+  
+  
+  
+  
+  <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script id="rendered-js">
+
+    //Data For the Skills
+          var skills = [
+          { "hd": "Programming Languages",
+            "captions": [
+            "Python & C/C++",
+            "Prolog \n&\n Pascal",
+            "Matlab \n&\n OWL",
+            "Ruby \n&\n Rust",
+            "HTML/\nCSS/JS"],
+
+            "values": [
+            1.00,
+            0.80,
+            0.70,
+            0.80,
+            0.70] },
+
+
+          { "hd": "Human Languages",
+            "captions": [
+            "English",
+            "Hindi",
+            "Japnese",
+            "Czech",
+            "Spanish"],
+
+            "values": [
+            1.00,
+            1.00,
+            0.60,
+            0.30,
+            0.20] },
+
+            { "hd": "Frameworks",
+            "captions":[
+            "Pytorch & Tensorflow",
+            "Django \n&\n Flask",
+            `Azure \n&\n CUDA`,
+            "Postgres \n&\n SparQL",
+            "Jupyter"],
+
+            "values": [
+            1.00,
+            0.85,
+            0.90,
+            0.80,
+            0.90] },
+            
+          { "hd": "Toolkits",
+          "captions":[
+              "GIT & CI/CD",
+              "BASH \n&\n Linux",
+              "CUDA HPC",
+              "SPM \n&\n Freesurfer",
+              "VS Code"
+              ],
+
+            "values": [
+            0.85,
+            0.85,
+            0.75,
+            0.60,
+            0.80] }];
+
+
+
+
+          var pgIndex = 0;
+          var valueIndex = 0;
+          var width = 0;
+          var height = 0;
+          var radOffset = Math.PI / 2;
+          var sides = 5; // Number of sides in the polygon
+          var theta = 2 * Math.PI / sides; // radians per section
+
+          function getXY(i, radius) {
+            return { "x": Math.cos(radOffset + theta * i) * radius * width + width / 2,
+              "y": Math.sin(radOffset + theta * i) * radius * height + height / 2 };
+          }
+
+          var hue = [];
+          var hueOffset = 25;
+
+          for (var s in skills) {
+            hue[s] = (hueOffset + s * 255 / skills.length) % 255;
+          }
+
+          $(".pg").each(function (index) {
+            width = $(this).width();
+            height = $(this).height();
+            var ctx = $(this).find('canvas')[0].getContext('2d');
+            ctx.canvas.width = 400;
+            ctx.canvas.height = 400;
+            ctx.font = "18px Monospace";
+            ctx.textAlign = "center";
+
+            /*** LABEL ***/
+            color = "hsl(" + hue[pgIndex] + ", 100%,60%)";
+            ctx.fillStyle = color;
+            ctx.fillText(skills[pgIndex].hd, width / 2, 15);
+
+            ctx.font = "15px Monospace";
+
+            /*** pg BACKGROUND ***/
+            for (var i = 0; i < sides; i++) {if (window.CP.shouldStopExecution(0)) break;
+              // For each side, draw two segments: the side, and the radius
+              ctx.beginPath();
+              xy = getXY(i, 0.3);
+              colorJitter = 25 + theta * i * 2;
+              color = "hsl(" + hue[pgIndex] + ",100%," + colorJitter + "%)";
+              ctx.fillStyle = color;
+              ctx.strokeStyle = color;
+              ctx.moveTo(0.5 * width, 0.5 * height); //center
+              ctx.lineTo(xy.x, xy.y);
+              xy = getXY(i + 1, 0.3);
+              ctx.lineTo(xy.x, xy.y);
+              xy = getXY(i, 0.42);
+              console.log();
+              text=skills[pgIndex].captions[valueIndex];
+              lineheight = 15;
+              lines = text.split('\n');
+              for (let nedex = 0; nedex < lines.length; nedex++) {
+              ctx.fillText(lines[nedex], xy.x, xy.y + (nedex * lineheight)); }
+              valueIndex++;
+              ctx.closePath();
+              ctx.fill();
+              ctx.stroke();
+            }window.CP.exitedLoop(0);
+
+            valueIndex = 0;
+            ctx.beginPath();
+            ctx.fillStyle = "rgba(0, 0, 0, 0.2)";
+            ctx.strokeStyle = "rgba(0, 0, 0, 0.3)";
+            ctx.lineWidth = 5;
+            var value = skills[pgIndex].values[valueIndex];
+            xy = getXY(i, value * 0.3);
+            ctx.moveTo(xy.x, xy.y);
+            /*** SKILL GRAPH ***/
+            for (var i = 0; i < sides; i++) {if (window.CP.shouldStopExecution(1)) break;
+              xy = getXY(i, value * 0.3);
+              ctx.lineTo(xy.x, xy.y);
+              valueIndex++;
+              value = skills[pgIndex].values[valueIndex];
+            }window.CP.exitedLoop(1);
+            ctx.closePath();
+            ctx.stroke();
+            ctx.fill();
+            valueIndex = 0;
+            pgIndex++;
+          });
+    </script>    
         </section>
         <!--=============== SERVICES ===============-->
         <section class="services section">
             <span class="section__subtitle">My Projects</span>
             <h2 class="section__title">What I am Doing</h2>
+            <style>  
+                   
+            </style>
             
             <div class="services__container container grid">
                 <div class="services__card">
@@ -307,20 +516,19 @@
                             See More <i class='bx bx-right-arrow services__icon'></i>
                         </span>
                     </div>
-
-
+                    
+ 
                     <div class="services__modal">
                         <div class="services__modal-content">
                             <i class='bx bx-x services__modal-close'></i>
 
-                            <h3 class="services__modal-title">Interpretable neural networks for the analysis of brain functions</h3>
+                            <h2 class="services__modal-title">Interpretable neural networks for the analysis of brain functions</h2>
 
                             <p class="services__modal-description">„Diese Maßnahme wird mit Mitteln der Europäischen Union kofinanziert und durch Steuermittel auf Grundlage des vom Sächsischen Landtags beschlossenen Haushaltes mitfinanziert.“
                             </p>
                             <a class="highlight-link" href="https://tu-dresden.de/" target="_blank" rel="noreferrer">
                                 Link To Project
                               </a>
-
                             <ul class="services__modal-list">
                                 
                                 <li class="services__modal-item">
@@ -334,7 +542,7 @@
                                 </li>
                                 
                                 
-                            </ul>
+                          </ul>
                         </div>
                     </div>
                 </div>
@@ -348,20 +556,19 @@
                             See More <i class='bx bx-right-arrow services__icon'></i>
                         </span>
                     </div>
-
-
+                    
+ 
                     <div class="services__modal">
                         <div class="services__modal-content">
                             <i class='bx bx-x services__modal-close'></i>
 
-                            <h3 class="services__modal-title">SFB940 "Volition and Cognitive Control</h3>
+                            <h2 class="services__modal-title">SFB940 "Volition and Cognitive Control</h2>
 
                             <p class="services__modal-description">University Funded Project 
                             </p>
                             <a class="highlight-link" href="https://tu-dresden.de/bereichsuebergreifendes/sfb940/?set_language=de" target="_blank" rel="noreferrer">
                                 Link To Project
                               </a>
-
                             <ul class="services__modal-list">
                                 
                                 <li class="services__modal-item">
@@ -375,7 +582,7 @@
                                 </li>
                                 
                                 
-                            </ul>
+                          </ul>
                         </div>
                     </div>
                 </div>
@@ -389,20 +596,19 @@
                             See More <i class='bx bx-right-arrow services__icon'></i>
                         </span>
                     </div>
-
-
+                    
+ 
                     <div class="services__modal">
                         <div class="services__modal-content">
                             <i class='bx bx-x services__modal-close'></i>
 
-                            <h3 class="services__modal-title">Project Z2 Core Imaging Facility</h3>
+                            <h2 class="services__modal-title">Project Z2 Core Imaging Facility</h2>
 
                             <p class="services__modal-description">University Funded Project
                             </p>
                             <a class="highlight-link" href="https://tu-dresden.de/bereichsuebergreifendes/sfb940/research/z-zentralprojekte/z2/research/b-modulatoren/b3" target="_blank" rel="noreferrer">
                                 Link To Project
                               </a>
-
                             <ul class="services__modal-list">
                                 
                                 <li class="services__modal-item">
@@ -411,7 +617,7 @@
                                 </li>
                                 
                                 
-                            </ul>
+                          </ul>
                         </div>
                     </div>
                 </div>
@@ -427,70 +633,44 @@
 
             <div class="work__filters">
                 <span class="work__item active-work" data-filter='all'>All</span>
-                <span class=" work__item" data-filter='.web'>Web</span>
-                <span class=" work__item" data-filter='.movil'>Movil</span>
-                <span class=" work__item" data-filter='.design'>Design</span>
+                <span class=" work__item" data-filter='.jp'>Journal Publications</span>
+                <span class=" work__item" data-filter='.pr'>Pre-Publications/Registrations </span>
             </div>
 
             <div class="work__container container grid">
-                <div class="work__card mix web">
-                    <img src="assets/img/work1.jpg" alt="" class="work__img">
-
-                    <h3 class="work__title">Web Design</h3>
-
-                    <a href="#" class="work__button">
-                        Demo <i class='bx bx-right-arrow work__icon'></i>
-                    </a>
-                </div>
-
-                <div class="work__card mix movil">
-                    <img src="assets/img/work2.jpg" alt="" class="work__img">
-
-                    <h3 class="work__title">App Movil</h3>
-
-                    <a href="#" class="work__button">
-                        Demo <i class='bx bx-right-arrow work__icon'></i>
-                    </a>
-                </div>
-
-                <div class="work__card mix design">
-                    <img src="assets/img/work3.jpg" alt="" class="work__img">
-
-                    <h3 class="work__title">Brand Design</h3>
-
-                    <a href="#" class="work__button">
-                        Demo <i class='bx bx-right-arrow work__icon'></i>
-                    </a>
-                </div>
-
-                <div class="work__card mix web">
-                    <img src="assets/img/work4.jpg" alt="" class="work__img">
-
-                    <h3 class="work__title">Web Design</h3>
-
-                    <a href="#" class="work__button">
-                        Demo <i class='bx bx-right-arrow work__icon'></i>
-                    </a>
-                </div>
-
-                <div class="work__card mix movil">
-                    <img src="assets/img/work5.jpg" alt="" class="work__img">
-
-                    <h3 class="work__title">App Movil</h3>
-
-                    <a href="#" class="work__button">
-                        Demo <i class='bx bx-right-arrow work__icon'></i>
-                    </a>
-                </div>
+                <style>
+                    .cs {
+                      word-wrap:break-word;
+                      overflow-wrap: break-word;
+                      width: 20vw;
+                    }
+                    </style>
+                
+                <div class="work__card mix jp">
+                    <h2 class="work__title">Interpretable neural networks for the analysis of brain functions</h3>
+                    <div class="cs">„Diese Maßnahme wird mit Mitteln der Europäischen Union kofinanziert und durch Steuermittel auf Grundlage des vom Sächsischen Landtags beschlossenen Haushaltes mitfinanziert.“</div> 
+                    <a href="https://tu-dresden.de/" class="work__button">
+                        Link <i class='bx bx-right-arrow work__icon'></i>
+                    </a> 
+                </div> 
+                
+                <div class="work__card mix pr">
+                    <h2 class="work__title">I21132423f brain functions</h3>
+                    <div class="cs">adhskjafhekjf</div> 
+                    <a href="https://tu-dresden.de/" class="work__button">
+                        Link <i class='bx bx-right-arrow work__icon'></i>
+                    </a> 
+                </div> 
+                
 
             </div>
         </section>
-
+ 
         <!--=============== CONTACT ===============-->
         <section class="contact section" id="contact">
             <sapn class="section__subtitle">Get in touch</sapn>
             <h3 class="section__title">Contact Me</h3>
-
+ 
             <div class="contact__container container grid">
                 <div class="contact__content">
                     <h3 class="contact__title contact__title-info">Feel free to contact me via email or any of the social media platforms. or visit mty office at TU Dresden.</h3>
@@ -512,7 +692,7 @@
                 </div>
 
         </section>
-    </main>
+    </main>  
 
     <!--=============== FOOTER ===============-->
     <footer class="footer">
@@ -560,143 +740,7 @@
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
 
-    <script>
-
-var skills = [
-  {"header" : "INTERESTS",
-    "captions" : [
-      "Cooking",
-      "Web",
-      "Mobile",
-      "Design",
-      "AI"
-    ],
-    "values" : [
-      0.70,
-      0.90,
-      0.70,
-      0.80,
-      0.70
-    ]
-  },
-  {"header" : "LANGUAGES",
-    "captions" : [
-      "nodeJS",
-      "PHP",
-      "JS",
-      "Ruby",
-      "Java"
-    ],
-    "values" : [
-      0.80,
-      0.85,
-      0.90,
-      0.70,
-      0.90
-    ]
-  },
-  {"header" : "MISC",
-    "captions" : [
-      "Eclipse",
-      "Git",
-      "Rails",
-      "OpenGL",
-      "Linux"
-    ],
-    "values" : [
-      0.85,
-      0.85,
-      0.75,
-      0.60,
-      0.80
-    ]
-  }
-];
-
-var pentagonIndex = 0;
-var valueIndex = 0;
-var width = 0;
-var height = 0;
-var radOffset = Math.PI/2
-var sides = 5; // Number of sides in the polygon
-var theta = 2 * Math.PI/sides; // radians per section
-
-function getXY(i, radius) {
-  return {"x": Math.cos(radOffset +theta * i) * radius*width + width/2,
-    "y": Math.sin(radOffset +theta * i) * radius*height + height/2};
-}
-
-var hue = [];
-var hueOffset = 25;
-
-for (var s in skills) {
-  $(".cs").append('<div class="pentagon" id="interests"><div class="hd"></div><canvas class="pentCanvas"/></div>');
-  hue[s] = (hueOffset + s * 255/skills.length) % 255;
-}
-
-$(".pentagon").each(function(index){
-  width = $(this).width();
-  height = $(this).height();
-  var ctx = $(this).find('canvas')[0].getContext('2d');
-  ctx.canvas.width = width;
-  ctx.canvas.height = height;
-  ctx.font="15px Monospace";
-  ctx.textAlign="center";
-  
-  /*** LABEL ***/
-  color = "hsl("+hue[pentagonIndex]+", 100%, 50%)";
-  ctx.fillStyle = color;
-  ctx.fillText(skills[pentagonIndex].header, width/2, 15);
-
-  ctx.font="13px Monospace";   
-
-  /*** PENTAGON BACKGROUND ***/
-  for (var i = 0; i < sides; i++) {
-    // For each side, draw two segments: the side, and the radius
-    ctx.beginPath();
-    xy = getXY(i, 0.3);
-    colorJitter = 25 + theta*i*2;
-    color = "hsl("+hue[pentagonIndex]+",100%," + colorJitter + "%)";
-    ctx.fillStyle = color;
-    ctx.strokeStyle = color;
-    ctx.moveTo(0.5*width, 0.5*height); //center
-    ctx.lineTo(xy.x, xy.y);
-    xy = getXY(i+1, 0.3);
-    ctx.lineTo(xy.x, xy.y);
-    xy = getXY(i, 0.37);
-    console.log();
-    ctx.fillText(skills[ pentagonIndex].captions[valueIndex],xy.x, xy.y +5);
-    valueIndex++;
-    ctx.closePath();
-    ctx.fill();
-    ctx.stroke();
-  }
-  
-  valueIndex = 0;
-  ctx.beginPath();
-  ctx.fillStyle = "rgba(0, 0, 0, 0.2)";
-  ctx.strokeStyle = "rgba(0, 0, 0, 0.3)";
-  ctx.lineWidth = 5;
-  var value = skills[pentagonIndex].values[valueIndex];
-  xy = getXY(i, value * 0.3);
-  ctx.moveTo(xy.x,xy.y);
-  /*** SKILL GRAPH ***/
-  for (var i = 0; i < sides; i++) {
-    xy = getXY(i, value * 0.3);
-    ctx.lineTo(xy.x,xy.y);
-    valueIndex++;
-    value = skills[pentagonIndex].values[valueIndex];
-  }
-  ctx.closePath();
-  ctx.stroke();
-  ctx.fill();
-  valueIndex = 0;  
-  pentagonIndex++;
-});
-
-
-
-    </script>
+   
 </body>
 
-</html>
+</html>  
