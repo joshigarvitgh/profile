@@ -1,11 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!DOCTYPE html> 
+<html lang="en">  
+           
 <head>
-    <meta charset="UTF-8">
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+      
+        gtag('config', 'G-3KSRQJ2GCN');
+      </script>  
+    <meta charset="UTF-8">        
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!--=============== FAVICON ===============-->
+    
+    <!--=============== FAVICON ===============-->   
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
@@ -15,25 +22,28 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
     <meta name="theme-color" content="#a789d4">
-
+ 
     <!--=============== BOXICONS ===============-->
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-
-    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--=============== SWIPER CSS ===============--> 
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-
+ 
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/styles.css">
     <title>{{ site.title }}</title>
     <meta name="description" content="{{ site.description }}">
+     <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3KSRQJ2GCN"></script>
+
 </head>
 
 <body>
     <!--=============== HEADER ===============-->
-    <header class="header" id="header">
-        <nav class="nav container">
-            <a href="#" class="nav__logo">Garvit</a>
-
+    <header class="header" id="header"> 
+        <nav class="nav container"> 
+            <a href="https://tu-dresden.de/bereichsuebergreifendes/nic/research/grps_med/sesyn/people/garvit_joshi" class="nav__logo">Garvit Joshi</a>
+ 
             <div class="nav__menu">
                 <ul class="nav__list">
                     <li class="nav__item ">
@@ -50,16 +60,27 @@
 
                     <li class="nav__item">
                         <a href="#skills" class="nav__link">
-                            <i class='bx bx-book'></i>
+                            <i class='bx bx-buildings  '></i>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#testimonial" class="nav__link">
+                            <i class='bx bx-code-block '></i>
+                        </a>
+                    </li>
+                    
+                    <li class="nav__item">
+                        <a href="#services" class="nav__link">
+                            <i class='bx bx-briefcase-alt-2 '></i>
                         </a>
                     </li>
 
                     <li class="nav__item">
                         <a href="#work" class="nav__link">
-                            <i class='bx bx-briefcase-alt-2'></i>
+                            <i class='bx bx-book'></i>
                         </a>
                     </li>
-
                     <li class="nav__item">
                         <a href="#contact" class="nav__link">
                             <i class='bx bx-message-square-dots'></i>
@@ -103,18 +124,18 @@
                     </a>
                     <a href="https://github.com/{{site.github_username}}" target="_blank" class="home__social-link">
                         <i class='bx bxl-github'></i>
-                    </a>
+                    </a> 
                     <a href="https://tu-dresden.de/bereichsuebergreifendes/nic/research/grps_med/sesyn/people/garvit_joshi" target="_blank" class="home__social-link">
                         <i class='bx bxl-dribbble'></i>
                     </a>
-                </div>
+                </div> 
 
                 <a href="#about" class="home__scroll">
                     <i class='bx bx-mouse home__scroll-icon'></i>
                     <span class="home__scroll-name">Scroll Down</span>
                 </a>
             </div>
-        </section>
+        </section> 
 
         <!--=============== ABOUT ===============-->
         <section class="about section" id="about">
@@ -122,113 +143,72 @@
             <h2 class="section__title">{{site.about_me_title}}</h2>
 
             <div class="about__container container grid">
-                <img src="{{site.baseurl}}/assets/img/TU_Dresden_Logo_weiss.png" alt="" class="about__img">
+                <img src="{{site.baseurl}}/assets/img/TU_Dresden_Logo_weiss2.png" alt="" class="about__img">
                 <img src="{{site.baseurl}}/assets/img/EFRE-ESF_dark.jpg" alt="" class="about__img">
                     <p class="about__description">{{site.about_me_description}}</p>
                     <a href="#contact" class="button about__button-contact" style="text-align:center"> Contact Me</a>
-                </div>
+                </div> 
             </div>
-        </section>
+        </section> 
 
         <!--=============== SKILLS ===============-->
         <section class="skills section" id="skills">
-            <span class="section__subtitle"></span>
+            <span class="section__subtitle"></span> 
             <h2 class="section__title">My Experience</h2>
                 
-
+              <div class="skills__content container grid" > 
                 <section id="cd-timeline" class="cd-container">
+  
+                    {% for event in site.data.timeline %}
                     <div class="cd-timeline-block">
                         <div class="cd-timeline-img cd-picture">
                         </div>
             
-                        <div class="cd-timeline-content">
-                            <h2>Penta Consulting</h2>
-                    <div class="timeline-content-info">
+                        <div class="cd-timeline-content"> 
+                            <h2>{{event.title}}</h2>
+                    <div class="timeline-content-info"> 
                       <span class="timeline-content-info-title">
                         <i class="fa fa-certificate" aria-hidden="true"></i>
-                        Front End Developer
-                      </span>
+                        {{event.subtitle}}
+                      </span>&ensp;
                       <span class="timeline-content-info-date">
                         <i class="fa fa-calendar-o" aria-hidden="true"></i>
-                        June 2016 - Present
+                        {{event.date}}
                       </span>
                     </div>
-                            <p>Working alongside the designer team implementing the designs, also developing custom s olutions to address team necessities.</p>
-                    <ul class="content-skills">
-                    <li>HTML5</li>
-                    <li>CSS3</li>
-                    <li>JavaScript</li>
-                    <li>jQuery</li>
-                    <li>Wordpress</li>
+                    
+                            
+                    <ul class="timeline-tags">
+                    {% for tag in event.tags %}
+                    <li>{{tag.tag}}</li>
+                    {% endfor %}
                     </ul>
-                        </div> <!-- cd-timeline-content -->
-                    </div> <!-- cd-timeline-block -->
-            
-                    <div class="cd-timeline-block">
-                        <div class="cd-timeline-img cd-movie">
-                        </div> <!-- cd-timeline-img -->
-            
-                        <div class="cd-timeline-content">
-                            <h2>Title of  section 2</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p>
-                            <span class="cd-date">Jan 18</span>
-                        </div> <!-- cd-timeline-content -->
-                    </div> <!-- cd-timeline-block -->
-            
-                    <div class="cd-timeline-block">
-                        <div class="cd-timeline-img cd-picture">
-                        </div> <!-- cd-timeline-img -->
-            
-                        <div class="cd-timeline-content">
-                            <h2>Title of section 3</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p>
-                            <span class="cd-date">Jan 24</span>
-                        </div> <!-- cd-timeline-content -->
-                    </div> <!-- cd-timeline-block -->
-            
-                    <div class="cd-timeline-block">
-                        <div class="cd-timeline-img cd-location">
-                        </div> <!-- cd-timeline-img -->
-            
-                        <div class="cd-timeline-content">
-                            <h2>Title of section 4</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
-                            <span class="cd-date">Feb 14</span>
-                        </div> <!-- cd-timeline-content -->
-                    </div> <!-- cd-timeline-block -->
-            
-                    <div class="cd-timeline-block">
-                        <div class="cd-timeline-img cd-location">
-                        </div> 
-            
-                        <div class="cd-timeline-content">
-                            <h2>Title of section 5</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>
-                            <span class="cd-date">Feb 18</span>
-                        </div> <!-- cd-timeline-content -->
-                    </div> <!-- cd-timeline-block -->
-            
-                    <div class="cd-timeline-block">
-                        <div class="cd-timeline-img cd-movie">
-                        </div> <!-- cd-timeline-img -->
-            
-                        <div class="cd-timeline-content">
-                            <h2>Final Section</h2>
-                            <p>This is the content of the last section</p>
-                            <span class="cd-date">Feb 26</span>
-                        </div> <!-- cd-timeline-content -->
-                    </div> <!-- cd-timeline-block -->
-                </section> <!-- cd-timeline -->
-       
-        </section>
+                    <a href="{{event.title-url}}" target="_blank" class="website__button" >
+                        Official Website <i class='bx bx-world contact__button-icon'></i></a>
+                    </div> <!-- cd-timeline-content -->
+                    </div> 
+                    {% endfor %}
 
+
+                </section> <!-- cd-timeline -->
+                </div>
+        </section>
+         <!--=============== Skills ===============-->
+         <section class="testimonial  section" id="testimonial">
+            <span class="section__subtitle">What Can i Do ?</span>
+            <h2 class="section__title">My Skills</h2>
+            <div class="skills__container container grid">
+                {% include section-skills.html %}    
+        </section>
         <!--=============== SERVICES ===============-->
-        <section class="services section">
+        <section class="services section" id="services">
             <span class="section__subtitle">My Projects</span>
             <h2 class="section__title">What I am Doing</h2>
+
+             <div class="services__container container grid">
             {% for project in site.data.projects %}
-            <div class="services__container container grid">
-                <div class="services__card">
+           
+                <div class="services__card {{project.type}} ">
                     <div class="serv">
                         <h3 class="services__title">{{project.name}}</h3>
 
@@ -236,20 +216,19 @@
                             See More <i class='bx bx-right-arrow services__icon'></i>
                         </span>
                     </div>
-
-
+                    
+ 
                     <div class="services__modal">
                         <div class="services__modal-content">
                             <i class='bx bx-x services__modal-close'></i>
 
-                            <h3 class="services__modal-title">{{project.name}}</h3>
+                            <h2 class="services__modal-title">{{project.name}}</h2>
 
                             <p class="services__modal-description">{{project.descr}}
                             </p>
                             <a class="highlight-link" href="{{project.demo}}" target="_blank" rel="noreferrer">
                                 Link To Project
                               </a>
-
                             <ul class="services__modal-list">
                                 {% for tag in project.tags %}
                                 <li class="services__modal-item">
@@ -258,12 +237,12 @@
                                 </li>
                                 {% endfor %}
                                 
-                            </ul>
+                          </ul>
                         </div>
                     </div>
                 </div>
             {% endfor %}
-                
+        
             </div>
         </section>
 
@@ -274,70 +253,36 @@
 
             <div class="work__filters">
                 <span class="work__item active-work" data-filter='all'>All</span>
-                <span class=" work__item" data-filter='.web'>Web</span>
-                <span class=" work__item" data-filter='.movil'>Movil</span>
-                <span class=" work__item" data-filter='.design'>Design</span>
+                <span class=" work__item" data-filter='.jp'>Journal Publications</span>
+                <span class=" work__item" data-filter='.pr'>Pre-Publications/Registrations </span>
             </div>
 
             <div class="work__container container grid">
-                <div class="work__card mix web">
-                    <img src="assets/img/work1.jpg" alt="" class="work__img">
-
-                    <h3 class="work__title">Web Design</h3>
-
-                    <a href="#" class="work__button">
-                        Demo <i class='bx bx-right-arrow work__icon'></i>
-                    </a>
-                </div>
-
-                <div class="work__card mix movil">
-                    <img src="assets/img/work2.jpg" alt="" class="work__img">
-
-                    <h3 class="work__title">App Movil</h3>
-
-                    <a href="#" class="work__button">
-                        Demo <i class='bx bx-right-arrow work__icon'></i>
-                    </a>
-                </div>
-
-                <div class="work__card mix design">
-                    <img src="assets/img/work3.jpg" alt="" class="work__img">
-
-                    <h3 class="work__title">Brand Design</h3>
-
-                    <a href="#" class="work__button">
-                        Demo <i class='bx bx-right-arrow work__icon'></i>
-                    </a>
-                </div>
-
-                <div class="work__card mix web">
-                    <img src="assets/img/work4.jpg" alt="" class="work__img">
-
-                    <h3 class="work__title">Web Design</h3>
-
-                    <a href="#" class="work__button">
-                        Demo <i class='bx bx-right-arrow work__icon'></i>
-                    </a>
-                </div>
-
-                <div class="work__card mix movil">
-                    <img src="assets/img/work5.jpg" alt="" class="work__img">
-
-                    <h3 class="work__title">App Movil</h3>
-
-                    <a href="#" class="work__button">
-                        Demo <i class='bx bx-right-arrow work__icon'></i>
-                    </a>
-                </div>
-
+                <style>
+                    .cs {
+                      word-wrap:break-word;
+                      overflow-wrap: break-word;
+                      width: 15vw;
+                    }
+                    </style>
+                {% for publication in site.data.publications %}
+                <div class="work__card {{publication.type}}">
+                    <h2 class="work__title cs">{{publication.name}}</h3>
+                    <div>{{publication.auth}}</div> 
+                    <a href="{{publication.demo}}" class="work__button">
+                        Link <i class='bx bx-right-arrow work__icon'></i>
+                    </a> 
+                </div> 
+                {% endfor %}
+                
             </div>
         </section>
-
+ 
         <!--=============== CONTACT ===============-->
         <section class="contact section" id="contact">
             <sapn class="section__subtitle">Get in touch</sapn>
             <h3 class="section__title">Contact Me</h3>
-
+ 
             <div class="contact__container container grid">
                 <div class="contact__content">
                     <h3 class="contact__title contact__title-info">{{site.contact_description}}</h3>
@@ -352,14 +297,25 @@
                                 Write Me <i class='bx bx-right-arrow contact__button-icon'></i>
                             </a>
                         </div>
+                        <div class="contact__card">
+                            <i class='bx bx-envelope contact__card-icon'></i>
+                            <h3 class="contact__card-title">Post</h3>
+                            <span class="contact__card-data">Technische Universität Dresden <br>
+                                Forschungsbereich Systemische Neurowissenschaften<br>
+                                Würzburger Straße 35 <br>
+                                
+                                01187 Dresden
+                            </span>
 
+                            </a>
+                        </div>
                     </div>
                 </div>
 
                 </div>
 
         </section>
-    </main>
+    </main>  
 
     <!--=============== FOOTER ===============-->
     <footer class="footer">
@@ -375,10 +331,16 @@
                     <a href="#about" class="footer__link">About</a>
                 </li>
                 <li class="footer__item">
-                    <a href="#skills" class="footer__link">Skills</a>
+                    <a href="#skills" class="footer__link">Experience</a>
                 </li>
                 <li class="footer__item">
-                    <a href="#work" class="footer__link">Work</a>
+                    <a href="#testimonial" class="footer__link">Skills</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#services" class="footer__link">Projects</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#work" class="footer__link">Publications</a>
                 </li>
                 <li class="footer__item">
                     <a href="#contact" class="footer__link">Contact</a>
@@ -406,6 +368,8 @@
 
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
+
+   
 </body>
 
-</html>
+</html>  
