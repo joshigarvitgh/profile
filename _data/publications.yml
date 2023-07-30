@@ -1,9 +1,9 @@
 - name: Interpretable neural networks for the analysis of brain functions
-  descr: „Diese Maßnahme wird mit Mitteln der Europäischen Union kofinanziert und durch Steuermittel auf Grundlage des vom Sächsischen Landtags beschlossenen Haushaltes mitfinanziert.“
+  auth: auth1,auth2,auth3
   demo: https://tu-dresden.de/
   type: "jp"
   
 - name: I21132423f brain functions
-  descr: adhskjafhekjf
+  auth: adhskjafhekjf
   demo: https://tu-dresden.de/
   type: "pr"
