@@ -181,12 +181,11 @@
         <section class="services section">
             <span class="section__subtitle">My Projects</span>
             <h2 class="section__title">What I am Doing</h2>
-            <style>  
-                   
-            </style>
+
+             <div class="services__container container grid">
             {% for project in site.data.projects %}
-            <div class="services__container container grid">
-                <div class="services__card">
+           
+                <div class="services__card {{project.type}} ">
                     <div class="serv">
                         <h3 class="services__title">{{project.name}}</h3>
 
@@ -220,7 +219,7 @@
                     </div>
                 </div>
             {% endfor %}
-                
+        
             </div>
         </section>
 
@@ -244,7 +243,7 @@
                     }
                     </style>
                 {% for publication in site.data.publications %}
-                <div class="work__card mix {{publication.type}}">
+                <div class="work__card {{publication.type}}">
                     <h2 class="work__title">{{publication.name}}</h3>
                     <div class="cs">{{publication.descr}}</div> 
                     <a href="{{publication.demo}}" class="work__button">
@@ -252,7 +251,7 @@
                     </a> 
                 </div> 
                 {% endfor %}
-
+                
             </div>
         </section>
  
