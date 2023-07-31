@@ -180,6 +180,10 @@
                             
                     <ul class="timeline-tags">
                     
+                    <li>Computational Neuroscience/Psychology</li>
+                    
+                    <li>Expalinable AI.</li>
+                    
                     </ul>
                     <a href="https://tu-dresden.de/" target="_blank" class="website__button" >
                         Official Website <i class='bx bx-world contact__button-icon'></i></a>
@@ -289,7 +293,7 @@
                         </div>
             
                         <div class="cd-timeline-content"> 
-                            <h2>Rajiv Gandhi Proudyogiki Vishwavidyalaya</h2>
+                            <h2>RGPV (CDGI)</h2>
                     <div class="timeline-content-info"> 
                       <span class="timeline-content-info-title">
                         <i class="fa fa-certificate" aria-hidden="true"></i>
@@ -327,14 +331,14 @@
   text-align: center;
   width: 100%;
   margin: auto;
-  height: 25px;
+  height: auto;
 }
 
 .pg {
   width: 400px;
-  height: 400px;
+  height: 370px;
   margin: auto;
-  padding: 3px 3px 28px 3px;
+  padding: 2px 2px 22px 2px;
   display:inline-block;
 }
 
@@ -342,25 +346,25 @@
 <div class="skills__content">
   <div class="skills__box">
 
-  <div class="pg" id="interests"><div class="hd"></div><canvas class="pentCanvas" width="500" height="500"></canvas></div>
+  <div class="pg" id="interests"><div class="hd"></div><canvas class="pentCanvas" width="400" height="400"></canvas></div>
   </div>
   </div>
  <div class="skills__content">
   <div class="skills__box">
 
-  <div class="pg" id="interests"><div class="hd"></div><canvas class="pentCanvas" width="500" height="500"></canvas></div>
+  <div class="pg" id="interests"><div class="hd"></div><canvas class="pentCanvas" width="400" height="400"></canvas></div>
 </div>
 </div>
 <div class="skills__content">
   <div class="skills__box">
 
-  <div class="pg" id="interests"><div class="hd"></div><canvas class="pentCanvas" width="500" height="500"></canvas></div>
+  <div class="pg" id="interests"><div class="hd"></div><canvas class="pentCanvas" width="400" height="400"></canvas></div>
 </div>
 </div>
 <div class="skills__content">
   <div class="skills__box">
 
-  <div class="pg" id="interests"><div class="hd"></div><canvas class="pentCanvas" width="500" height="500"></canvas></div>
+  <div class="pg" id="interests"><div class="hd"></div><canvas class="pentCanvas" width="400" height="400"></canvas></div>
 </div>
 </div>
 
@@ -376,9 +380,9 @@
   <!--
   </div>
   <div class="pg" id="interests">
-  <div class="hd"></div><canvas class="pentCanvas" width="300" height="300"></canvas>
+  <div class="hd"></div><canvas class="pentCanvas" width="400" height="400"></canvas>
   </div><div class="pg" id="interests"><div class="hd">
-  </div><canvas class="pentCanvas" width="300" height="300"></canvas></div></div>
+  </div><canvas class="pentCanvas" width="400" height="400"></canvas></div></div>
 
   -->
 
@@ -473,12 +477,12 @@
               "y": Math.sin(radOffset + theta * i) * radius * height + height / 2 };
           }
 
-          var hue = [];
-          var hueOffset = 25;
+          var hue = [61,155,185,10];
+          var hueOffset = 2;
 
-          for (var s in skills) {
-            hue[s] = (hueOffset + s * 255 / skills.length) % 255;
-          }
+        //  for (var s in skills) {
+         //   hue[s] = (hueOffset + s+1.5 * 255 / skills.length) % 255;
+         // }
 
           $(".pg").each(function (index) {
             width = $(this).width();
@@ -486,15 +490,15 @@
             var ctx = $(this).find('canvas')[0].getContext('2d');
             ctx.canvas.width = 400;
             ctx.canvas.height = 400;
-            ctx.font = "18px Monospace";
+            ctx.font = "20px Monospace";
             ctx.textAlign = "center";
 
             /*** LABEL ***/
-            color = "hsl(" + hue[pgIndex] + ", 100%,60%)";
+            color = "hsl(" + hue[pgIndex] + ", 70%,50%)";
             ctx.fillStyle = color;
             ctx.fillText(skills[pgIndex].hd, width / 2, 15);
 
-            ctx.font = "15px Monospace";
+            ctx.font = "12px Monospace bold";
 
             /*** pg BACKGROUND ***/
             for (var i = 0; i < sides; i++) {if (window.CP.shouldStopExecution(0)) break;
@@ -759,9 +763,6 @@
 
                 <li class="footer__item">
                     <a href="#" class="footer__link">Home</a>
-                </li>
-                <li class="footer__item">
-                    <a href="#about" class="footer__link">About</a>
                 </li>
                 <li class="footer__item">
                     <a href="#skills" class="footer__link">Experience</a>

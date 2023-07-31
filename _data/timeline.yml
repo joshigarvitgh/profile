@@ -20,6 +20,9 @@
   title-url: https://tu-dresden.de/
   date: 09/2022 - Ongoing 
   subtitle: Docktorand Student
+  tags:
+    - tag: Computational Neuroscience/Psychology 
+    - tag: Expalinable AI.
   timeline-side: left
 
 - title: Technische Universität Dresden
@@ -53,7 +56,7 @@
     - tag: ASP
   timeline-side: left
 
-- title: Rajiv Gandhi Proudyogiki Vishwavidyalaya
+- title: RGPV (CDGI)
   title-url: https://www.rgpv.ac.in/
   date: 2014 - 2018
   subtitle: B.E. Computer Science and Engeneering
