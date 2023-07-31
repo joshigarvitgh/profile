@@ -963,6 +963,10 @@ body.light-theme {
   .work__filters {
     column-gap: 0.25rem;
   }
+  .footer__link {
+    color: var(--body-color);
+    font-size: var(--small-font-size);
+  }
 }
 
 @media screen and (min-width: 435px) {
@@ -973,6 +977,10 @@ body.light-theme {
 
   .work__img {
     width: 165px;
+  }
+  .footer__link {
+    color: var(--body-color);
+    font-size: var(--small-font-size);
   }
 }
 
