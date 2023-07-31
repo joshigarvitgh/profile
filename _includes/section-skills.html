@@ -9,8 +9,8 @@
 }
 
 .pg {
-  width: 400px;
-  height: 370px;
+  width: 350px;
+  height: 350px;
   margin: auto;
   padding: 2px 2px 22px 2px;
   display:inline-block;
@@ -20,25 +20,25 @@
 <div class="skills__content">
   <div class="skills__box">
 
-  <div class="pg" id="interests"><div class="hd"></div><canvas class="pentCanvas" width="400" height="400"></canvas></div>
+  <div class="pg" id="interests"><div class="hd"></div><canvas class="pentCanvas" width="350" height="350"></canvas></div>
   </div>
   </div>
  <div class="skills__content">
   <div class="skills__box">
 
-  <div class="pg" id="interests"><div class="hd"></div><canvas class="pentCanvas" width="400" height="400"></canvas></div>
+  <div class="pg" id="interests"><div class="hd"></div><canvas class="pentCanvas" width="350" height="350"></canvas></div>
 </div>
 </div>
 <div class="skills__content">
   <div class="skills__box">
 
-  <div class="pg" id="interests"><div class="hd"></div><canvas class="pentCanvas" width="400" height="400"></canvas></div>
+  <div class="pg" id="interests"><div class="hd"></div><canvas class="pentCanvas" width="350" height="350"></canvas></div>
 </div>
 </div>
 <div class="skills__content">
   <div class="skills__box">
 
-  <div class="pg" id="interests"><div class="hd"></div><canvas class="pentCanvas" width="400" height="400"></canvas></div>
+  <div class="pg" id="interests"><div class="hd"></div><canvas class="pentCanvas" width="350" height="350"></canvas></div>
 </div>
 </div>
 
@@ -54,9 +54,9 @@
   <!--
   </div>
   <div class="pg" id="interests">
-  <div class="hd"></div><canvas class="pentCanvas" width="400" height="400"></canvas>
+  <div class="hd"></div><canvas class="pentCanvas" width="350" height="350"></canvas>
   </div><div class="pg" id="interests"><div class="hd">
-  </div><canvas class="pentCanvas" width="400" height="400"></canvas></div></div>
+  </div><canvas class="pentCanvas" width="350" height="350"></canvas></div></div>
 
   -->
 
@@ -107,9 +107,10 @@
             { "hd": "Frameworks",
             "captions":[
             "Pytorch & Tensorflow",
-            "Django \n&\n Flask",
+            "SQL \n&\n SparQL",
+          
             `Azure \n&\n CUDA`,
-            "Postgres \n&\n SparQL",
+            "Django \n&\n Flask",
             "Jupyter"],
 
             "values": [
@@ -121,10 +122,10 @@
             
           { "hd": "Toolkits",
           "captions":[
-              "GIT & CI/CD",
+              " Freesurfer \n&\n SPM ",
               "BASH \n&\n Linux",
               "CUDA HPC",
-              "SPM \n&\n Freesurfer",
+              "GIT & CI/CD",
               "VS Code"
               ],
 
@@ -162,9 +163,9 @@
             width = $(this).width();
             height = $(this).height();
             var ctx = $(this).find('canvas')[0].getContext('2d');
-            ctx.canvas.width = 400;
-            ctx.canvas.height = 400;
-            ctx.font = "20px Monospace";
+            ctx.canvas.width = 350;
+            ctx.canvas.height = 350;
+            ctx.font = "18px Monospace";
             ctx.textAlign = "center";
 
             /*** LABEL ***/
@@ -172,7 +173,7 @@
             ctx.fillStyle = color;
             ctx.fillText(skills[pgIndex].hd, width / 2, 15);
 
-            ctx.font = "12px Monospace bold";
+            ctx.font = "15px Monospace";
 
             /*** pg BACKGROUND ***/
             for (var i = 0; i < sides; i++) {if (window.CP.shouldStopExecution(0)) break;
