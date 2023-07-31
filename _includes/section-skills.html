@@ -4,15 +4,15 @@
 .hd {
   text-align: center;
   width: 100%;
-  margin: auto;
+  margin: auto; 
   height: auto;
 }
 
 .pg {
-  width: 350px;
-  height: 350px;
+  width: 320px;
+  height: 320px;
   margin: auto;
-  padding: 2px 2px 22px 2px;
+  padding: 1px 1px 5px 1px;
   display:inline-block;
 }
 
@@ -81,7 +81,7 @@
             "Ruby \n&\n Rust",
             "HTML/\nCSS/JS"],
 
-            "values": [
+            "values": [ 
             1.00,
             0.80,
             0.70,
@@ -151,7 +151,7 @@
             return { "x": Math.cos(radOffset + theta * i) * radius * width + width / 2,
               "y": Math.sin(radOffset + theta * i) * radius * height + height / 2 };
           }
-
+ 
           var hue = [61,155,185,10];
           var hueOffset = 2;
 
@@ -189,12 +189,16 @@
               xy = getXY(i + 1, 0.3);
               ctx.lineTo(xy.x, xy.y);
               xy = getXY(i, 0.42);
+              xy = getXY(i, 0.42); // Get the original position
+              var adjustX = 10 * Math.cos(radOffset + theta * i); // Adjustments for the x and y coordinates
+              var adjustY = 10 * Math.sin(radOffset + theta * i);
               console.log();
               text=skills[pgIndex].captions[valueIndex];
               lineheight = 15;
               lines = text.split('\n');
               for (let nedex = 0; nedex < lines.length; nedex++) {
-              ctx.fillText(lines[nedex], xy.x, xy.y + (nedex * lineheight)); }
+                ctx.fillText(lines[nedex], xy.x + adjustX, xy.y + adjustY + (nedex * lineheight));
+              }
               valueIndex++;
               ctx.closePath();
               ctx.fill();
