@@ -152,20 +152,19 @@
             <span class="section__subtitle"></span> 
             <h2 class="section__title">My Experience</h2>
                 
-              <div class="skills__content container grid" > 
+            <div class="skills__content container grid" > 
                 <section id="cd-timeline" class="cd-container">
-  
-                    {% for event in site.data.timeline %}
+                    {% for event in site.data.timeline %} 
                     <div class="cd-timeline-block">
-                        <div class="cd-timeline-img cd-picture">
+                        <div class="cd-timeline-img cd-picture"> 
                         </div>
             
-                        <div class="cd-timeline-content"> 
+                        <div class="cd-timeline-content">  
                             <h2>{{event.title}}</h2>
                     <div class="timeline-content-info"> 
                       <span class="timeline-content-info-title">
                         <i class="fa fa-certificate" aria-hidden="true"></i>
-                        {{event.subtitle}}
+                        {{event.subtitle}} 
                       </span>&ensp;
                       <span class="timeline-content-info-date">
                         <i class="fa fa-calendar-o" aria-hidden="true"></i>
@@ -222,8 +221,8 @@
 
                             <p class="services__modal-description">{{project.descr}}
                             </p>
-                            <a class="highlight-link" href="{{project.demo}}" target="_blank" rel="noreferrer">
-                                Link To Project
+                            <a class="highlight-link website__button" href="{{project.demo}}" target="_blank" rel="noreferrer">
+                                Link To Project  <i class='bx bx-world contact__button-icon'></i>
                               </a>
                             <ul class="services__modal-list">
                                 {% for tag in project.tags %}
@@ -276,7 +275,7 @@
  
         <!--=============== CONTACT ===============-->
         <section class="contact section" id="contact">
-            <sapn class="section__subtitle">Get in touch</sapn>
+            <span class="section__subtitle">Get in touch</span>
             <h3 class="section__title">Contact Me</h3>
  
             <div class="contact__container container grid">
@@ -339,7 +338,6 @@
 
             <ul class="footer__social">
 
-           
             </ul>
 
 
@@ -363,7 +361,6 @@
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
 
-   
 </body>
 
 </html>  
